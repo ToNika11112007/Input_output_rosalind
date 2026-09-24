@@ -10,9 +10,9 @@ with open("rosalind_array", "r", encoding="utf-8") as f:
         adj[u].append(v)
         adj[v].append(u)
 
-degrees = [0] * (n + 1)
-for i in range(1, n + 1):
-    degrees[i] = len(adj[i])
+degrees = []
+for i in range(n + 1):
+    degrees.append(len(adj[i]))
 
 result = []
 for i in range(1, n + 1):
